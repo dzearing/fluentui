@@ -4,11 +4,12 @@ const configHelpers = require('@fluentui/eslint-plugin/src/utils/configHelpers')
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
   extends: ['plugin:@fluentui/eslint-plugin/react--legacy'],
-  plugins: ['@fluentui'],
+  plugins: ['@fluentui', '@rnx-kit'],
   root: true,
   rules: {
     '@fluentui/ban-imports': ['error', { pathRegex: '^(\\.\\./)+Styling$', names: ['FontSizes'] }],
     '@typescript-eslint/no-explicit-any': 'off',
+    '@rnx-kit/no-export-all': ['error', { expand: 'external-only' }],
   },
   overrides: [
     {

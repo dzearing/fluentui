@@ -1,7 +1,9 @@
 {
+  "plugins": ["@rnx-kit"],
   "extends": ["plugin:@fluentui/eslint-plugin/react--legacy"],
   "root": true,
   "rules": {
-    "prefer-const": "off"
+    "prefer-const": "off",
+    "@rnx-kit/no-export-all": ["error", { "expand": "external-only" }]
   }
 }
